@@ -1,0 +1,93 @@
+/* =============
+    Together
+============= */
+
+#together{
+    background-color: $dark;
+    padding-bottom: 80px;
+    >div{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "children"
+        "cmn";
+        grid-template-rows: repeat(2, 380px);
+        @include sm{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "children"
+            "cmn";
+            grid-template-rows: repeat(2, 300px);
+        }
+        @include md{
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "children"
+            "cmn";
+            grid-template-rows: repeat(2, 300px);
+        }
+        @include lg{
+            padding: 80px 0px;
+            margin: 0 auto;
+            width: 50%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas:
+            "children"
+            "cmn";
+            grid-template-rows: repeat(2, auto);
+            margin: 0 auto;
+        }
+
+        article{
+
+            h1{
+                color: $light;
+                font-weight: 600;
+                font-size: rem-calc(48);
+                line-height: rem-calc(48);
+                letter-spacing: rem-calc(0.75);
+            }
+            img{
+                grid-area: children;
+                padding: 24px;
+                align-items: center;
+                display: inline-block;
+                align-self: flex-end;
+                max-width: 240px;
+                @include sm{
+                    max-width: 320px;
+                }
+                @include md{
+                    max-width: 400px;
+                }
+                @include lg{
+                    max-width: 600px;
+                }
+            }
+
+        }
+        aside{
+            grid-area: cmn;
+            display: inline-block;
+            align-self: flex-end;
+            h2{
+                font-family: 'Space Mono', monospace;
+                font-size: 64px;
+                color: $sea;
+                font-size: rem-calc(64);
+                letter-spacing: rem-calc(0.75);
+                padding-left: 24px;
+            }
+            div{
+                p{
+                    color: $light;
+                }
+                a{
+                    color: $confetti;
+                    margin: 32px;
+                }
+            }
+        }
+    }
+
+}

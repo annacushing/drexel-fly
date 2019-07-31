@@ -1,0 +1,69 @@
+/* =============
+    Identity
+============= */
+
+#identity{
+    p{
+        font-family: 'Lora';
+        font-weight: 400;
+        color: $dark;
+        font-size: rem-calc(32);
+        padding: 48px 48px 16px;
+    }
+    h4{
+        font-family: 'Poppins';
+        font-size: rem-calc(40);
+        letter-spacing: rem-calc(0.2);
+        padding: 0px 48px 80px;
+    }
+    ul{
+        display: grid;
+        grid-template-areas:
+        "dancer"
+        "donor"
+        "healer"
+        "fighter";
+        grid-template-rows: repeat(4, 280px);
+        grid-template-columns: repeat(2, 100%);
+
+        @include md{
+            grid-template-columns: repeat(2, 50%);
+            grid-template-areas:
+            "dancer donor"
+            "healer fighter";
+            grid-template-rows: repeat(2, 240px);
+        }
+        @include lg{
+            grid-template-columns: repeat(4, 25%);
+            grid-template-areas:
+            "dancer donor healer fighter";
+            grid-template-rows: repeat(1, 240px);
+        }
+
+        @include xl{
+            background-color: $dark;
+            padding: 80px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+            ". dancer donor healer fighter .";
+            grid-template-rows: repeat(1, 240px);
+        }
+
+        li:nth-child(1) {
+            background-color: $watermelon;
+            grid-area: dancer;
+        }
+        li:nth-child(2) {
+            background-color: $peach;
+            grid-area: donor;
+        }
+        li:nth-child(3) {
+            background-color: $tan;
+            grid-area: healer;
+        }
+        li:nth-child(4) {
+            background-color: $confetti;
+            grid-area: fighter;
+        }
+    }
+}

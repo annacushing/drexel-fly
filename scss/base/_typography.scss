@@ -1,0 +1,38 @@
+/* =============
+    Typography
+============= */
+body{
+
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 40px 24px;
+    @include sm{
+        letter-spacing: rem-calc(0.5);
+        font-size: rem-calc(32);
+        line-height: rem-calc(40);
+    }
+    @include md{
+        letter-spacing: rem-calc(0.8);
+        font-size: rem-calc(40);
+        line-height: rem-calc(48);
+    }
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 32px;
+    @include sm{
+        font-size: rem-calc(16);
+        letter-spacing: rem-calc(0.2);
+        line-height: rem-calc(28);
+    };
+    @include md{
+        font-size: rem-calc(24);
+        letter-spacing: rem-calc(0.4);
+        line-height: rem-calc(32);
+    };
+}

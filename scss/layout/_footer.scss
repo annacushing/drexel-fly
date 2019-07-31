@@ -1,0 +1,33 @@
+/* =============
+    Footer
+============= */
+footer {
+    background-color: $dark;
+    padding: 48px;
+
+    h1 {
+        font-size: rem-calc(32);
+        color: $light;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+
+        li {
+            padding: 0 12px;
+
+            a:link,
+            a:visited {
+                color: $light;
+                font-size: rem-calc(30);
+            }
+
+            a:active,
+            a:hover {
+                color: $confetti;
+            }
+        }
+    }
+}

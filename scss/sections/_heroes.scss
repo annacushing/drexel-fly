@@ -1,0 +1,88 @@
+/* =============
+    Heroes
+============= */
+
+#hero{
+    height: 457px;
+    background-image: url('../img/hero/hero.jpg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    @include lg{
+        background-position: 0 -100px;;
+        height: 540px;
+    }
+    @include xl{
+        background-position: 0 -220px;;
+        height: 680px;
+    }
+    div{
+        padding: 16px;
+        display: inline-block;
+        align-self: flex-end;
+        @include md{
+            margin: 0 auto 0 50%;
+            width: 50%;
+        }
+        @include lg{
+            margin: 0 auto 0 63%;
+            width: 37%;
+        }
+        p{
+            @include md{
+                font-size: rem-calc(24);
+                line-height: rem-calc(32);
+                background-color: $light;
+                margin: 40px;
+                padding: 40px;
+                border-radius: 16px;
+            }
+        }
+
+    }
+}
+
+#hero2{
+    height: 378px;
+    background-image: url('../img/hero/hero2.jpg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    @include sm{
+        display: none;
+    }
+    @include lg{
+        display: inline-block;
+    }
+    div{
+        h1{
+            color: $dark;
+            font-family: 'Space Mono';
+            padding: 48px;
+            @include md{
+                font-size: rem-calc(40);
+                line-height: rem-calc(40);
+                text-align: center;
+            }
+            @include lg{
+                font-size: rem-calc(80);
+                line-height: rem-calc(80);
+                text-align: center;
+            }
+        }
+    }
+}
+
+#hero3{
+    height: 378px;
+    background-image: url('../img/hero/hero3.jpg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    @include xl{
+        height: 500px;
+    }
+}

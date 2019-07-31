@@ -1,0 +1,79 @@
+/* =============
+    Gallery
+============= */
+#gallery {
+    div{
+        background-color: black;
+    }
+    ul {
+        max-width: 968px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+        "mission"
+        "kid1"
+        "kid2"
+        "kid3"
+        "banner";
+        grid-template-rows: repeat(5, 272px);
+
+        @include sm{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "mission kid1"
+            "kid2 kid3";
+            grid-template-rows: repeat(2, 240px);
+            grid-gap: 8px;
+        }
+
+        @include md{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "mission kid1"
+            "kid2 kid3"
+            "banner banner";
+            grid-template-rows: repeat(3, 350px);
+            padding: 80px;
+            grid-gap: 32px;
+        }
+
+        @include lg{
+            max-width: 600px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "mission kid3"
+            "banner banner"
+            "kid2 kid1";
+            grid-template-rows: repeat(3, 280px);
+        }
+
+
+
+        li {
+            background-size: cover;
+            height: 100%;
+        }
+
+        li:nth-child(1) {
+            background-image: url("../img/gallery/mission.jpg");
+            grid-area: mission;
+        }
+        li:nth-child(2) {
+            background-image: url("../img/gallery/kid1.jpg");
+            grid-area: kid1;
+        }
+        li:nth-child(3) {
+            background-image: url("../img/gallery/kid2.jpg");
+            grid-area: kid2;
+        }
+        li:nth-child(4) {
+            background-image: url("../img/gallery/kid3.jpg");
+            grid-area: kid3;
+        }
+        li:nth-child(5) {
+            background-image: url("../img/gallery/banner.jpg");
+            grid-area: banner;
+            background-position: 0 -50px;
+        }
+    }
+}

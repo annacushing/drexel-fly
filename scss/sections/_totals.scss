@@ -1,0 +1,53 @@
+/* =============
+    Totals
+============= */
+
+#totals{
+    padding: 80px 40px;
+    background-color: $light;
+    >div{
+        @include md{
+            width: 80%;
+            margin: 0 auto;
+        }
+        @include lg{
+            width: 60%;
+            margin: 0 auto;
+        }
+        @include xl{
+            width: 40%;
+            margin: 0 auto;
+        }
+        h1{
+            color: $mystic;
+        }
+        h6{
+            font-family: 'Space Mono', monospace;
+            color: $sea;
+            font-family: 'Space Mono';
+            font-weight: 400;
+            font-size: rem-calc(24);
+            line-height: rem-calc(28);
+            color: $dark;
+            padding: 0px 24px;
+        }
+        aside{
+            padding: 24px 0px;
+            .link{
+                color: $mystic;
+                margin: 0px 24px;
+            }
+        }
+        .tan-bg{
+            background-color: $tan;
+            height: 24px;
+            border-radius: 20px;
+            margin: 0px 24px;
+            div{
+                color: $mystic;
+                height: 24px;
+                width: 30%;
+            }
+        }
+    }
+}
