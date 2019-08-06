@@ -16,25 +16,47 @@
 
 <body>
 
-    <main>
-        <header>
-            <section>
-                <img src="img/nav/logo.svg" alt="Fly Logo">
-            </section>
-            <section>
-                <button id="burger-icon">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </section>
+    <!-- Your options for data-navigation-position is: left | right -->
+    <!-- Your options for data-navigation-slide is: over | under | push -->
+    <section id="off-canvas-container" data-navigation-position="right" data-navigation-slide="over">
+        <div>
+            <button>
+                <i class="far fa-times-circle" id="close-btn"></i>
+            </button>
+            <div id="nav-container">
+                <nav data-nav="main-navigation">
+                    <ul>
+                        <li><a href="#">GET INVOLVED</a></li>
+                        <li><a href="#">WHO IT'S FOR</a></li>
+                        <li><a href="#" class="button">DONATE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
 
-            <nav data-nav="main-navigation">
-                <ul>
-                    <li><a href="#">GET INVOLVED</a></li>
-                    <li><a href="#">WHO IT'S FOR</a></li>
-                    <li><a href="#" class="button">DONATE</a></li>
-                </ul>
-            </nav>
-        </header>
+
+    <!-- The header needs to be outside of the main tag if you are going to position fix it. -->
+    <header data-fixed="fixed-item">
+        <div>
+            <!-- <section>
+                <img src="img/nav/logo.svg" alt="Fly Logo">
+            </section> -->
+            <!-- burger icon -->
+            <section id="burger-icon">
+                <i class="fas fa-bars"></i>
+            </section>
+        </div>
+    </header>
+
+
+    <main>
+
+
+        <!-- overlay for the view when the menu is visible. Please don't move -->
+        <div class="js-off-canvas-overlay" id="overlay"></div>
+        <!-- overlay for the view when the menu is visible. Please don't move -->
+
 
         <section id="hero">
             <div>
@@ -150,9 +172,9 @@
             <div>
                 <h1>TALK TO US</h1>
                 <div>
-                    <p>Name</p>
-                    <p>Email</p>
-                    <div></div>
+                    <input type="text" placeholder="Name" required>
+                    <input type="text" placeholder="Email" required>
+                    <input type="text" placeholder="Message" required>
                     <a href="#" class="button">SEND</a>
                 </div>
             </div>
