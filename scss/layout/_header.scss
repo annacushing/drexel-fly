@@ -17,7 +17,9 @@ header {
     // logo container
     section:nth-child(1) {
         grid-area: logo;
-        padding: 16px;
+        padding: 24px;
+        align-items: center;
+        display: flex;
     }
 
     // burger container
@@ -25,21 +27,9 @@ header {
         align-items: center;
         display: flex;
         grid-area: burger;
-        justify-content: flex-end;
-        padding: 16px;
+
         @include lg {
             display: none;
-        }
-
-        button {
-            border: none;
-            background-color: $light;
-            color: $dark;
-            font-size: rem-calc(30);
-            outline: none;
-            a:active, a:hover {
-                color: $mystic;
-            }
         }
 
     }
@@ -52,5 +42,37 @@ header {
         @include lg {
             display: block !important;
         }
+    }
+}
+
+
+#burger-container {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    outline: none;
+    position: relative;
+    width: 90px;
+
+    div {
+        background-color: $dark;
+        height: 4px;
+        margin-bottom: 24px;
+        position: absolute;
+        width: 100%;
+    }
+
+    div:nth-child(1) {
+        top: 0;
+    }
+
+    div:nth-child(2) {
+        top: 20px;
+    }
+
+    div:nth-child(3) {
+        margin: 0;
+        top: 40px;
     }
 }
