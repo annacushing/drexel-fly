@@ -362,72 +362,8 @@ p {
       line-height: 2rem; } }
 
 /* =============
-    Off Canvas
-============= */
-main {
-  position: relative;
-  z-index: 10;
-  background-color: white; }
-
-#off-canvas-container {
-  background-color: black;
-  display: grid;
-  grid-template-areas: ". off-canvas .";
-  grid-template-columns: 10px auto 10px;
-  padding-top: 20px;
-  width: 200px;
-  /* If you need padding or margin on the off-canvas menu, please add it to this div */ }
-  #off-canvas-container > div {
-    grid-area: off-canvas; }
-
-#off-canvas-container[data-navigation-slide="over"], #off-canvas-container[data-navigation-slide="push"] {
-  height: 100vh;
-  position: fixed;
-  z-index: 1000; }
-
-#off-canvas-container[data-navigation-slide="under"] {
-  height: 100vh;
-  position: fixed;
-  z-index: 5; }
-
-/* left */
-#off-canvas-container[data-navigation-position='left'] {
-  left: 0;
-  top: 0; }
-
-/* right */
-#off-canvas-container[data-navigation-position='right'] {
-  right: 0;
-  top: 0; }
-
-/* ===================
-    Navigation Helpers
- =================== */
-/* overlay */
-.js-off-canvas-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  width: 100vw;
-  height: 100%;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  /* change the color of the overlay */
-  background-color: rgba(0, 0, 0, 0.25);
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden; }
-
-.is-visible {
-  opacity: 1 !important;
-  visibility: visible !important; }
-
-/* =============
     Buttons
 ============= */
-button {
-  outline: none; }
-
 .button {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
@@ -468,76 +404,94 @@ textarea {
 /* =============
     Navigation
 ============= */
-#off-canvas-container {
-  /* -------------
-        Here are the properties you can changes for the off-canvas navigation-slide
-    ------------- */
-  width: 240px;
-  background-color: #FEF7E8;
-  /* close btn */
-  /* close btn */ }
-  #off-canvas-container button {
-    background-color: transparent;
-    border: none;
-    color: #1D1F20;
-    cursor: pointer;
-    font-size: 1.5625rem;
-    margin-bottom: 20px;
-    text-align: right;
-    transition: 0.25s;
-    width: 100%; }
-  #off-canvas-container button:hover {
-    color: #7893D7; }
-  #off-canvas-container ul li {
-    margin-bottom: 20px;
-    margin-left: 16px;
-    width: 100%; }
-    #off-canvas-container ul li a:link,
-    #off-canvas-container ul li a:visited {
-      color: #1D1F20;
+nav {
+  background-color: #1D1F20;
+  padding: 10px; }
+  @media (min-width: 968px) {
+    nav {
+      background-color: #FEF7E8; } }
+  nav ul {
+    text-align: right; }
+    @media (min-width: 968px) {
+      nav ul {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: flex-end; } }
+    nav ul li {
+      margin: 16px; }
+      @media (min-width: 968px) {
+        nav ul li {
+          margin-bottom: 0;
+          margin-left: 20px; } }
+      nav ul li a:link,
+      nav ul li a:visited {
+        color: #FEF7E8; }
+        @media (min-width: 968px) {
+          nav ul li a:link,
+          nav ul li a:visited {
+            color: #1D1F20; } }
+    nav ul li:nth-child(1) {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       font-size: 1rem;
-      letter-spacing: 0.0625rem; }
-    #off-canvas-container ul li a:active,
-    #off-canvas-container ul li a:hover {
-      color: #7893D7; }
-  #off-canvas-container ul li:nth-child(1), #off-canvas-container ul li:nth-child(2) {
-    border-bottom: 3px solid #1D1F20; }
-  #off-canvas-container ul li:nth-child(3) {
-    margin-top: 40px; }
-    #off-canvas-container ul li:nth-child(3) a:active,
-    #off-canvas-container ul li:nth-child(3) a:hover {
-      background-color: #7893D7;
-      color: #FEF7E8; }
-
-#burger-icon {
-  background-color: #1D1F20;
-  border-radius: 8px;
-  border: none;
-  font-size: 1.4375rem;
-  color: #7893D7;
-  outline: none;
-  padding: 10px 12px 8px 12px;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 100; }
-
-#burger-icon:hover {
-  background-color: #1D1F20;
-  color: #FEF7E8; }
+      letter-spacing: 0.0625rem;
+      margin-bottom: 22px; }
+    nav ul li:nth-child(2) {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.0625rem;
+      margin-bottom: 32px; }
+      @media (min-width: 968px) {
+        nav ul li:nth-child(2) {
+          margin-bottom: 22px; } }
+    nav ul li:nth-child(3) {
+      margin-bottom: 24px; }
+      nav ul li:nth-child(3) a:link, nav ul li:nth-child(3) a:visited {
+        color: #1D1F20; }
+      nav ul li:nth-child(3) a:active, nav ul li:nth-child(3) a:hover {
+        background-color: #7893D7;
+        color: #1D1F20; }
 
 /* =============
     Header
 ============= */
 header {
   background-color: #FEF7E8;
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end; }
+  display: grid;
+  grid-template-areas: "logo burger" "nav nav";
+  grid-template-columns: 70% auto; }
+  @media (min-width: 968px) {
+    header {
+      grid-template-areas: "logo nav";
+      grid-template-columns: 30% auto; } }
+  header section:nth-child(1) {
+    grid-area: logo;
+    padding: 16px; }
+  header section:nth-child(2) {
+    align-items: center;
+    display: flex;
+    grid-area: burger;
+    justify-content: flex-end;
+    padding: 16px; }
+    @media (min-width: 968px) {
+      header section:nth-child(2) {
+        display: none; } }
+    header section:nth-child(2) button {
+      border: none;
+      background-color: #FEF7E8;
+      color: #1D1F20;
+      font-size: 1.875rem;
+      outline: none; }
+      header section:nth-child(2) button a:active, header section:nth-child(2) button a:hover {
+        color: #7893D7; }
+  header nav {
+    display: none;
+    grid-area: nav; }
+    @media (min-width: 968px) {
+      header nav {
+        display: block !important; } }
 
 /* =============
     Footer
@@ -613,50 +567,31 @@ footer {
     Contact
 ============= */
 #contact {
-  display: grid;
   background-color: #F3E6CB;
-  padding-top: 40px;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
   display: block; }
   #contact > div {
-    max-width: 280px;
+    margin: 0px auto;
+    max-width: 789px;
     margin: 0 auto; }
     @media (min-width: 789px) {
       #contact > div {
-        max-width: 400px; } }
-    @media (min-width: 968px) {
-      #contact > div {
-        max-width: 540px; } }
-    @media (min-width: 1210px) {
-      #contact > div {
-        max-width: 640px; } }
-    #contact > div h1 {
-      padding: 24px 0 40px 0; }
-    #contact > div div input {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      outline: none;
-      display: block;
-      width: 100%;
-      background-color: transparent;
+        width: 80%;
+        padding: 80px 0px; } }
+    #contact > div div p {
       border: 1px solid #1D1F20;
       border-radius: 3px;
-      padding: 12px 22px;
-      margin: 0 auto 24px auto; }
-      @media (min-width: 498px) {
-        #contact > div div input {
-          font-size: 1rem;
-          letter-spacing: 0.0125rem;
-          line-height: 1.75rem; } }
-      @media (min-width: 789px) {
-        #contact > div div input {
-          font-size: 1.5rem;
-          letter-spacing: 0.025rem;
-          line-height: 2rem; } }
-    #contact > div div input:nth-child(3) {
-      margin-bottom: 48px; }
+      padding: 8px 16px;
+      margin: 0px 24px 24px 24px; }
+    #contact > div div div {
+      border: 1px solid #1D1F20;
+      border-radius: 3px;
+      padding: 8px 16px;
+      margin: 24px 24px 40px 24px;
+      height: 80px; }
     #contact > div div .button {
-      background-color: #9EDAE3; }
+      background-color: #9EDAE3;
+      margin: 120px 24px; }
 
 /* =============
     Events
@@ -785,7 +720,7 @@ footer {
   @media (min-width: 1210px) {
     #hero {
       background-position: 0 -220px;
-      height: 600px; } }
+      height: 680px; } }
   #hero div {
     padding: 16px;
     display: inline-block;
