@@ -1,0 +1,807 @@
+/* =============
+    Mixins
+============= */
+/* ---------------- Font Sizing ---------------- */
+html {
+  font-size: 100%; }
+
+/* ---------------- Media Queries ---------------- */
+/* =============
+    Variables
+============= */
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+/* =============
+    Base
+============= */
+h1, h2, h3, h4, h5, p, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+a:link, a:visited {
+  text-decoration: none;
+  transition: 0.25s; }
+
+.content-grid {
+  display: grid;
+  grid-template-areas: ". content ."; }
+  .content-grid > div {
+    grid-area: content; }
+
+/* =============
+    Typography
+============= */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03125rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 40px 24px; }
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.0125rem;
+  line-height: 1.5rem;
+  padding: 32px; }
+
+/* =============
+    Buttons
+============= */
+.button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  padding: 16px 24px;
+  margin-top: 16px;
+  border-radius: 32px;
+  color: #1D1F20;
+  background-color: #F0EE64; }
+  .button a:active,
+  .button a:hover {
+    color: #1D1F20;
+    background-color: #9EDAE3; }
+
+.link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: 2px solid; }
+
+/* =============
+    Forms
+============= */
+[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+  box-shadow: none; }
+
+[type='text']:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus, textarea:focus {
+  box-shadow: none; }
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+  -webkit-appearance: none; }
+
+/* =============
+    Navigation
+============= */
+/* =============
+    Header
+============= */
+header {
+  display: grid;
+  grid-template-columns: 20% auto;
+  padding: 10px;
+  background-color: #FEF7E8;
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  header nav i {
+    font-size: 1.875rem;
+    color: #1D1F20; }
+  header aside {
+    text-align: right; }
+    header aside a:active,
+    header aside a:hover {
+      color: #F0EE64;
+      background-color: #1D1F20; }
+
+/* =============
+    Footer
+============= */
+footer {
+  background-color: #1D1F20;
+  padding: 48px; }
+  footer h1 {
+    font-size: 2rem;
+    color: #FEF7E8;
+    text-align: center; }
+  footer ul {
+    display: flex;
+    justify-content: center; }
+    footer ul li {
+      padding: 0 12px; }
+      footer ul li a:link,
+      footer ul li a:visited {
+        color: #FEF7E8;
+        font-size: 1.875rem; }
+      footer ul li a:active,
+      footer ul li a:hover {
+        color: #F0EE64; }
+
+/* =============
+    Callouts
+============= */
+#callouts ul {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "ben" "jamie" "allison" "ciarlo";
+  grid-template-rows: repeat(4, 280px); }
+  @media (min-width: 498px) {
+    #callouts ul {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "ben jamie" "allison ciarlo";
+      grid-template-rows: repeat(2, 350px); } }
+  @media (min-width: 1210px) {
+    #callouts ul {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "ben jamie allison ciarlo";
+      grid-template-rows: repeat(1, 280px); } }
+  #callouts ul li {
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    padding: 48px; }
+  #callouts ul li:nth-child(1) {
+    grid-area: ben;
+    color: #FEF7E8;
+    background-color: #387DCB; }
+  #callouts ul li:nth-child(2) {
+    grid-area: jamie;
+    color: #1D1F20;
+    background-color: #9EDAE3; }
+  #callouts ul li:nth-child(3) {
+    grid-area: allison;
+    color: #FEF7E8;
+    background-color: #7893D7; }
+  #callouts ul li:nth-child(4) {
+    grid-area: ciarlo;
+    color: #1D1F20;
+    background-color: #A5DCC4; }
+
+/* =============
+    Contact
+============= */
+#contact {
+  background-color: #FEF7E8;
+  padding-bottom: 80px;
+  display: block; }
+  #contact > div {
+    margin: 0px auto; }
+    @media (min-width: 789px) {
+      #contact > div {
+        width: 75%; } }
+    @media (min-width: 968px) {
+      #contact > div {
+        width: 50%; } }
+    @media (min-width: 1210px) {
+      #contact > div {
+        width: 30%; } }
+    #contact > div div p {
+      border: 1px solid #1D1F20;
+      border-radius: 3px;
+      padding: 8px 16px;
+      margin: 0px 24px 24px 24px; }
+    #contact > div div div {
+      border: 1px solid #1D1F20;
+      border-radius: 3px;
+      padding: 8px 16px;
+      margin: 24px 24px 40px 24px;
+      height: 80px; }
+    #contact > div div .button {
+      background-color: #9EDAE3;
+      margin: 120px 24px; }
+
+/* =============
+    Events
+============= */
+#events h1 {
+  color: #1D1F20;
+  margin-bottom: -24px; }
+
+#events ul {
+  display: grid;
+  grid-template-areas: "event1" "event2" "event3";
+  grid-template-rows: repeat(3, 280px); }
+  @media (min-width: 789px) {
+    #events ul {
+      grid-template-columns: repeat(2, 40%);
+      grid-template-areas: "event1 event2" "event3 event3";
+      grid-template-rows: repeat(2, 350px);
+      align-items: center; } }
+  @media (min-width: 968px) {
+    #events ul {
+      grid-template-columns: repeat(3, 30%);
+      grid-template-areas: "event1 event2 event3";
+      grid-template-rows: repeat(1, 350px);
+      align-items: center; } }
+  #events ul li {
+    padding: 48px 0px; }
+    #events ul li p {
+      font-family: 'Lora';
+      font-weight: 400;
+      color: #1D1F20;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding: 0px 32px 32px 32px; }
+    #events ul li .button {
+      margin: 24px; }
+  #events ul li:nth-child(1) {
+    grid-area: event1; }
+  #events ul li:nth-child(2) {
+    grid-area: event2; }
+  #events ul li:nth-child(3) {
+    grid-area: event3;
+    background-color: #9EDAE3; }
+
+/* =============
+    Gallery
+============= */
+#gallery div {
+  background-color: black; }
+
+#gallery ul {
+  display: grid;
+  grid-template-areas: "mission" "kid1" "kid2" "kid3" "banner";
+  grid-template-rows: repeat(5, 272px); }
+  @media (min-width: 498px) {
+    #gallery ul {
+      grid-template-columns: repeat(1, 80%);
+      grid-template-areas: "mission" "kid1" "kid2" "kid3";
+      grid-template-rows: repeat(4, 350px);
+      padding: 24px;
+      grid-gap: 12px; } }
+  @media (min-width: 789px) {
+    #gallery ul {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-areas: "mission kid1" "kid2 kid3" "banner banner";
+      grid-template-rows: repeat(3, 350px);
+      padding: 80px;
+      grid-gap: 40px; } }
+  @media (min-width: 968px) {
+    #gallery ul {
+      grid-template-columns: repeat(3, 30%);
+      grid-template-areas: "mission kid3 kid3" "kid2 kid3 kid3" "kid1 banner banner";
+      grid-template-rows: repeat(3, 350px); } }
+  #gallery ul li {
+    background-size: cover;
+    height: 100%; }
+  #gallery ul li:nth-child(1) {
+    background-image: url("../img/gallery/mission.jpg");
+    grid-area: mission; }
+  #gallery ul li:nth-child(2) {
+    background-image: url("../img/gallery/kid1.jpg");
+    grid-area: kid1; }
+  #gallery ul li:nth-child(3) {
+    background-image: url("../img/gallery/kid2.jpg");
+    grid-area: kid2; }
+  #gallery ul li:nth-child(4) {
+    background-image: url("../img/gallery/kid3.jpg");
+    grid-area: kid3; }
+  #gallery ul li:nth-child(5) {
+    background-image: url("../img/gallery/banner.jpg");
+    grid-area: banner; }
+
+/* =============
+    Heroes
+============= */
+#hero {
+  height: 457px;
+  background-image: url("../img/hero/hero.jpg");
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex; }
+  #hero div {
+    padding: 16px;
+    display: inline-block;
+    align-self: flex-end; }
+    @media (min-width: 789px) {
+      #hero div {
+        margin: 0 auto 0 50%;
+        width: 50%; } }
+    @media (min-width: 968px) {
+      #hero div {
+        margin: 0 auto 0 63%;
+        width: 37%; } }
+    @media (min-width: 789px) {
+      #hero div p {
+        font-size: 1.5rem;
+        line-height: 2rem; } }
+
+#hero2 {
+  height: 378px;
+  background-image: url("../img/hero/hero2.jpg");
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex; }
+  @media (min-width: 498px) {
+    #hero2 {
+      display: none; } }
+  @media (min-width: 968px) {
+    #hero2 {
+      display: inline-block; } }
+  #hero2 div {
+    display: inline-block;
+    align-self: flex-end; }
+    #hero2 div h1 {
+      color: #1D1F20;
+      font-family: 'Space Mono';
+      padding: 48px; }
+      @media (min-width: 789px) {
+        #hero2 div h1 {
+          font-size: 2.5rem;
+          line-height: 2.5rem; } }
+      @media (min-width: 968px) {
+        #hero2 div h1 {
+          font-size: 5rem;
+          line-height: 5rem; } }
+
+#hero3 {
+  height: 378px;
+  background-image: url("../img/hero/hero3.jpg");
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex; }
+
+/* =============
+    Identity
+============= */
+#identity p {
+  font-family: 'Lora';
+  font-weight: 400;
+  color: #1D1F20;
+  font-size: 2rem;
+  padding: 48px 48px 16px; }
+
+#identity h4 {
+  font-family: 'Poppins';
+  font-size: 2.5rem;
+  letter-spacing: 0.0125rem;
+  padding: 0px 48px 80px; }
+
+#identity ul {
+  display: grid;
+  grid-template-areas: "dancer" "donor" "healer" "fighter";
+  grid-template-rows: repeat(4, 280px);
+  grid-template-columns: repeat(2, 100%); }
+  @media (min-width: 789px) {
+    #identity ul {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-areas: "dancer donor" "healer fighter";
+      grid-template-rows: repeat(2, 240px); } }
+  @media (min-width: 968px) {
+    #identity ul {
+      grid-template-columns: repeat(4, 25%);
+      grid-template-areas: "dancer donor healer fighter";
+      grid-template-rows: repeat(1, 240px); } }
+  #identity ul li:nth-child(1) {
+    background-color: #F77C68;
+    grid-area: dancer; }
+  #identity ul li:nth-child(2) {
+    background-color: #F3AE8C;
+    grid-area: donor; }
+  #identity ul li:nth-child(3) {
+    background-color: #F3E6CB;
+    grid-area: healer; }
+  #identity ul li:nth-child(4) {
+    background-color: #F0EE64;
+    grid-area: fighter; }
+
+/* =============
+    Together
+============= */
+#together {
+  background-color: #1D1F20;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-areas: "children" "cmn";
+  grid-template-rows: repeat(2, 560px); }
+  @media (min-width: 498px) {
+    #together {
+      grid-template-columns: repeat(1, 90%);
+      grid-template-areas: "children" "cmn";
+      grid-template-rows: repeat(2, 360px); } }
+  @media (min-width: 789px) {
+    #together {
+      grid-template-columns: repeat(1, 50%);
+      grid-template-areas: "children" "cmn";
+      grid-template-rows: repeat(2, 360px); } }
+  @media (min-width: 968px) {
+    #together {
+      grid-template-columns: repeat(2, 50%);
+      grid-template-areas: "children cmn" "children cmn";
+      grid-template-rows: repeat(2, 240px); } }
+  @media (min-width: 1210px) {
+    #together {
+      justify-content: center;
+      grid-template-columns: repeat(2, 30%);
+      grid-template-areas: "children cmn" "children cmn";
+      grid-template-rows: repeat(2, 240px); } }
+  #together article h1 {
+    color: #FEF7E8;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: 0.046875rem; }
+  #together article img {
+    padding: 24px;
+    width: 80%;
+    align-items: center;
+    display: inline-block;
+    align-self: flex-end; }
+  #together aside {
+    grid-area: cmn;
+    display: inline-block;
+    align-self: flex-end; }
+    #together aside h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 64px;
+      color: #9EDAE3;
+      font-size: 4rem;
+      letter-spacing: 0.046875rem;
+      padding-left: 24px; }
+    #together aside div p {
+      color: #FEF7E8; }
+    #together aside div a {
+      color: #F0EE64;
+      margin: 32px; }
+
+/* =============
+    Totals
+============= */
+#totals {
+  padding: 80px 40px;
+  background-color: #FEF7E8; }
+  @media (min-width: 789px) {
+    #totals > div {
+      width: 60%;
+      margin: 0 auto; } }
+  @media (min-width: 968px) {
+    #totals > div {
+      width: 40%;
+      margin: 0 auto; } }
+  #totals > div h1 {
+    color: #7893D7; }
+  #totals > div h6 {
+    font-family: 'Space Mono', monospace;
+    color: #9EDAE3;
+    font-family: 'Space Mono';
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #1D1F20;
+    padding: 0px 24px; }
+  #totals > div aside {
+    padding: 24px 0px; }
+    #totals > div aside .link {
+      color: #7893D7;
+      margin: 0px 24px; }
+  #totals > div .tan-bg {
+    background-color: #F3E6CB;
+    height: 24px;
+    border-radius: 20px;
+    margin: 0px 24px; }
+    #totals > div .tan-bg div {
+      color: #7893D7;
+      height: 24px;
+      width: 30%; }

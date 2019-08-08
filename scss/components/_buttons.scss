@@ -1,0 +1,28 @@
+/* =============
+    Buttons
+============= */
+.button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: rem-calc(16);
+    letter-spacing: rem-calc(1);
+    padding: 16px 24px;
+    margin-top: 16px;
+    border-radius: 32px;
+    color: $dark;
+    background-color: $confetti;
+
+    a:active,
+    a:hover {
+        color: $dark;
+        background-color: $sea;
+    }
+}
+
+.link{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: rem-calc(16);
+    letter-spacing: rem-calc(1);
+    border-bottom: 2px solid;
+}

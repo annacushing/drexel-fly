@@ -1,0 +1,33 @@
+/* =============
+    Header
+============= */
+header {
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 10px;
+    background-color: $light;
+    padding: 24px 16px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+    nav {
+        i {
+            font-size: rem-calc(30);
+            color: $dark;
+        }
+    }
+
+    aside {
+        text-align: right;
+        a:link,
+        a:visited {
+        }
+
+        a:active,
+        a:hover {
+            color: $confetti;
+            background-color: $dark;
+        }
+    }
+}

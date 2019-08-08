@@ -1,0 +1,61 @@
+/* =============
+    Events
+============= */
+
+#events{
+    h1{
+        color: $dark;
+        margin-bottom: -24px;
+    }
+    ul{
+        display: grid;
+        grid-template-areas:
+        "event1"
+        "event2"
+        "event3";
+        grid-template-rows: repeat(3, 280px);
+
+
+        @include md{
+            grid-template-columns: repeat(2, 40%);
+            grid-template-areas:
+            "event1 event2"
+            "event3 event3";
+            grid-template-rows: repeat(2, 350px);
+            align-items: center;
+        }
+
+        @include lg{
+            grid-template-columns: repeat(3, 30%);
+            grid-template-areas:
+            "event1 event2 event3";
+            grid-template-rows: repeat(1, 350px);
+            align-items: center;
+        }
+
+        li{
+            padding: 48px 0px;
+            p{
+                font-family: 'Lora';
+                font-weight: 400;
+                color: $dark;
+                font-size: rem-calc(24);
+                line-height: rem-calc(32);
+                padding: 0px 32px 32px 32px;
+            }
+            .button{
+                margin: 24px;
+            }
+        }
+        li:nth-child(1) {
+            grid-area: event1;
+        }
+        li:nth-child(2) {
+            grid-area: event2;
+        }
+        li:nth-child(3) {
+            grid-area: event3;
+            background-color: $sea;
+        }
+    }
+}

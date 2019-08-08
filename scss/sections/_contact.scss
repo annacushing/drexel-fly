@@ -1,0 +1,40 @@
+/* =============
+    Contact
+============= */
+
+#contact{
+    background-color: $light;
+    padding-bottom: 80px;
+    display: block;
+    >div{
+        margin: 0px auto;
+        @include md{
+            width: 75%;
+        }
+        @include lg{
+            width: 50%;
+        }
+        @include xl{
+            width: 30%;
+        }
+        div{
+            p{
+                border: 1px solid $dark;
+                border-radius: 3px;
+                padding: 8px 16px;
+                margin: 0px 24px 24px 24px;
+            }
+            div{
+                border: 1px solid $dark;
+                border-radius: 3px;
+                padding: 8px 16px;
+                margin: 24px 24px 40px 24px;
+                height: 80px;
+            }
+            .button{
+                background-color: $sea;
+                margin: 120px 24px;
+            }
+        }
+    }
+}

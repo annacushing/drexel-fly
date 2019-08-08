@@ -1,0 +1,60 @@
+/* =============
+    Callouts
+============= */
+
+#callouts{
+    ul {
+        display: grid;
+        justify-content: center;
+        grid-template-areas:
+        "ben"
+        "jamie"
+        "allison"
+        "ciarlo";
+        grid-template-rows: repeat(4, 280px);
+
+        @include sm{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "ben jamie"
+            "allison ciarlo";
+            grid-template-rows: repeat(2, 350px);
+        }
+
+
+        @include xl{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+            "ben jamie allison ciarlo";
+            grid-template-rows: repeat(1, 280px);
+        }
+
+        li {
+            font-family: 'Space Mono';
+            font-weight: 400;
+            font-size: rem-calc(24);
+            line-height: rem-calc(28);
+            padding: 48px;
+        }
+        li:nth-child(1) {
+            grid-area: ben;
+            color: $light;
+            background-color: $blueberry;
+        }
+        li:nth-child(2) {
+            grid-area: jamie;
+            color: $dark;
+            background-color: $sea;
+        }
+        li:nth-child(3) {
+            grid-area: allison;
+            color: $light;
+            background-color: $mystic;
+        }
+        li:nth-child(4) {
+            grid-area: ciarlo;
+            color: $dark;
+            background-color: $mint;
+        }
+    }
+}
